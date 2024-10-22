@@ -4,7 +4,7 @@ const app = require("express")();
 const cron = require("node-cron");
 require('dotenv').config();
 
-cron.schedule("*/2 * * * *", async () => {
+cron.schedule("*/5 * * * *", async () => {
   try {
    const response = await axios.get(process.env.URL);
     pino.info(response.data);
